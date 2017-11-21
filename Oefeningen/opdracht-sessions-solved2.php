@@ -7,12 +7,14 @@ if(isset($_POST['submit'])) {
     $_SESSION['gegevens']['registratieData']['email'] = $_POST['email']; 
     $_SESSION['gegevens']['registratieData']['nickname'] = $_POST['nickname'];
     
+}
+    
     $straat = (isset($_SESSION['gegevens']['verblijfplaats']['straat'])) ? $_SESSION['gegevens']['verblijfplaats']['straat']: '';
     $nummer = (isset($_SESSION['gegevens']['verblijfplaats']['nummer'])) ? $_SESSION['gegevens']['verblijfplaats']['nummer']: ''; 
     $gemeente = (isset($_SESSION['gegevens']['verblijfplaats']['gemeente'])) ? $_SESSION['gegevens']['verblijfplaats']['gemeente']: ''; 
     $postcode = (isset($_SESSION['gegevens']['verblijfplaats']['postcode'])) ? $_SESSION['gegevens']['verblijfplaats']['postcode']: ''; 
     
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +27,7 @@ if(isset($_POST['submit'])) {
    
    <h1>Sessions - deel2</h1>
 
-        <a href="phpoefening-021-deel1.php?session=destroy">Vernietig sessie</a>
+        <a href="opdracht-sessions-solved2.php?session=destroy">Vernietig sessie</a>
 
         <h2>Registratiegegevens: Adres</h2>
 
