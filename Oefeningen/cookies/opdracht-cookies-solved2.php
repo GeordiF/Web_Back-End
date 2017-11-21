@@ -1,30 +1,54 @@
 <?php
 
+
 $userContent = file_get_contents('userdata1.txt');
 $isVerified = false; 
 $contentArray = explode(',', $userContent); 
 
 if (!isset($_COOKIE['userInfoCookie'])) {
+    
   if (isset($_POST["submit"])) {
+      
       if ($_POST["username"] == $contentArray[0] && $_POST["password"] == $contentArray[1] ) {
-          setcookie("userInfoCookie",time() + 360);
-          header("location: opdracht-cookies-solved.php");
-      } else {
+          
+          if(isset($_POST["remeberMe"])) {
+              
+          setcookie("userInfoCookie",time() + 60*60*24*30);
+
+          }
+          
+          else {
+              
+          setcookie("userInfoCookie",time()+3600);
+              
+          }
+
+          header("location: opdracht-cookies-solved2.php");
+      } 
+      
+      else {
+          
         echo "Je inloggegevens zijn fout.";
+          
       }
   }
+    
 }
+
  else {
+     
     $isVerified = true;
+     
 }
 if (isset($_GET['logout'])) {
+    
     unset($_COOKIE['userInfoCookie']);
     setcookie('userInfoCookie', "",time()-1);
     $logging = false;
-    header("location: opdracht-cookies-solved.php");
+    header("location: opdracht-cookies-solved2.php");
 }
 
-?>
+?> 
 
 
 
@@ -33,10 +57,10 @@ if (isset($_GET['logout'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>cookies</title>
+    <title>Cookies Deel 2</title>
 </head>
 <body>
-   
+      
    <h1>Login</h1>
    
    <?php if(!$isVerified): ?>
@@ -51,6 +75,13 @@ if (isset($_GET['logout'])) {
                       <label for="password">Password</label>
                       <input type="password" id="password" name="password">
                   </li>
+                  
+                  <li>
+                      
+                      <label for="rememberMe">Remember me</label>
+                      <input type="checkbox" id="rememberMe" name="rememberMe">
+                      
+                  </li>
 
               </ul>
               <input type="submit" name="submit">
@@ -59,6 +90,6 @@ if (isset($_GET['logout'])) {
           <p>U bent reeds ingelogd.</p>
           <a href="opdracht-cookies-solved.php?logout=true">Uitloggen</a>
         <?php endif; ?>
-        
+         
 </body>
 </html>
