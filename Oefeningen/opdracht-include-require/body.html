@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <?php foreach ( $artikels as $key => $artikel): ?>
+  		<article>
+  			<h1><?= $artikel[ 'titel' ] ?></h1>
+  			<p><?= $artikel[ 'text' ] ?></p>
+  			<p><?= $artikel[ 'tags' ] ?></p>
+  		</article>
+  	<?php endforeach ?>
+  </body>
+</html>

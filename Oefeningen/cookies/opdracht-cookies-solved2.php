@@ -88,7 +88,7 @@ if (isset($_GET['logout'])) {
           </form>
         <?php else: ?>
           <p>U bent reeds ingelogd.</p>
-          <a href="opdracht-cookies-solved.php?logout=true">Uitloggen</a>
+          <a href="opdracht-cookies-solved2.php?logout=true">Uitloggen</a>
         <?php endif; ?>
          
 </body>
