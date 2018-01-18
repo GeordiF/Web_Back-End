@@ -1,3 +1,0 @@
-94.226.135.211 - - [08/Aug/2017:18:18:46 +0200] "GET / HTTP/1.1" 200 623 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
-94.226.135.211 - - [08/Aug/2017:18:18:46 +0200] "GET /favicon.ico HTTP/1.1" 404 209 "http://geordi.feijens.mtantwerp.eu/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
-94.226.135.211 - - [08/Aug/2017:19:15:11 +0200] "GET / HTTP/1.1" 200 623 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
